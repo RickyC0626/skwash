@@ -1,4 +1,4 @@
-package me.rickychon.skwash.server.endpoints;
+package me.rickychon.skwash.server.core.routes;
 
 import org.springframework.stereotype.Service;
 
@@ -8,7 +8,7 @@ import javax.ws.rs.Produces;
 
 @Service
 @Path("/")
-public class RootEndpoint {
+public class BaseRoute {
     @GET
     @Produces("text/plain")
     public String message() {
