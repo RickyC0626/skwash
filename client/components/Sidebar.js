@@ -2,15 +2,15 @@ import { HomeIcon, ClockIcon, MenuIcon } from '@heroicons/react/outline';
 
 export const Sidebar = () => (
   <aside className='sidebar'>
-    <ul className="space-y-2">
+    <ul className='sidebar-button-list'>
       <li>
-        <SidebarButton icon={<HomeIcon />} text="Home" active />
+        <SidebarButton icon={<HomeIcon />} text='Home' active />
       </li>
       <li>
-        <SidebarButton icon={<MenuIcon />} text="My tasks" />
+        <SidebarButton icon={<MenuIcon />} text='My tasks' />
       </li>
       <li>
-        <SidebarButton icon={<ClockIcon />} text="Recent" />
+        <SidebarButton icon={<ClockIcon />} text='Recent' />
       </li>
     </ul>
   </aside>
