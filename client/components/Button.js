@@ -1,12 +1,21 @@
 import PropTypes from 'prop-types';
 
-export const Button = ({ size="h-10 w-32", children="Click me" }) => (
-  <button className={` bg-red-400 font-bold text-white px-6 py-2 ${size} `}>
-    {children}
+export const Button = ({
+  icon, label, backgroundColor, hoverColor, textColor
+}) => (
+  <button className={`
+    ${backgroundColor} hover:${hoverColor}
+    px-4 py-3 rounded-lg
+  `}>
+    {icon}
+    <span className={`${textColor}`}>{label}</span>
   </button>
-)
+);
 
 Button.propTypes = {
-  size: PropTypes.string,
-  children: PropTypes.string,
+  icon: PropTypes.node,
+  label: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string,
+  hoverColor: PropTypes.string,
+  textColor: PropTypes.string,
 };
