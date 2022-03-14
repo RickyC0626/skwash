@@ -5,11 +5,11 @@
 @layer components {
   .sidebar {
     @apply bg-gray-50 border-r-2 border-gray-200
-    h-screen w-64
+    h-screen w-64 px-3 py-4
   }
 
   .sidebar-button-list {
-    @apply space-y-2 px-3 py-4
+    @apply space-y-2 mb-8
   }
 
   .sidebar-button-list-item {
@@ -34,8 +34,10 @@
   }
 
   .sidebar-section {
+    @apply space-y-1
   }
 
   .sidebar-section-heading {
+    @apply uppercase text-gray-500 font-bold px-2
   }
 }

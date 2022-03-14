@@ -27,6 +27,29 @@ export const Sidebar = () => (
         </SidebarButton>
       </SidebarButtonListItem>
     </SidebarButtonList>
+    <SidebarSection>
+      <SidebarSectionHeading>Teams</SidebarSectionHeading>
+      <SidebarButtonList>
+        <SidebarButtonListItem>
+          <SidebarButton>
+            <DotIcon fillColor='fill-indigo-500' />
+            <SidebarButtonText>Engineering</SidebarButtonText>
+          </SidebarButton>
+        </SidebarButtonListItem>
+        <SidebarButtonListItem>
+          <SidebarButton>
+            <DotIcon fillColor='fill-emerald-500' />
+            <SidebarButtonText>Human Resources</SidebarButtonText>
+          </SidebarButton>
+        </SidebarButtonListItem>
+        <SidebarButtonListItem>
+          <SidebarButton>
+            <DotIcon fillColor='fill-amber-500' />
+            <SidebarButtonText>Customer Success</SidebarButtonText>
+          </SidebarButton>
+        </SidebarButtonListItem>
+      </SidebarButtonList>
+    </SidebarSection>
   </aside>
 )
 
@@ -52,4 +75,22 @@ const SidebarButtonText = ({ children }) => (
   <span className='sidebar-button-text'>
     {children}
   </span>
+)
+
+const SidebarSection = ({ children }) => (
+  <section className='sidebar-section'>
+    {children}
+  </section>
+)
+
+const SidebarSectionHeading = ({ children }) => (
+  <span className='sidebar-section-heading'>
+    {children}
+  </span>
+)
+
+const DotIcon = ({ fillColor }) => (
+  <svg viewBox='0 0 100 100' className={`sidebar-button-icon ${fillColor}`}>
+    <circle cx='50' cy='50' r='25' />
+  </svg>
 )
