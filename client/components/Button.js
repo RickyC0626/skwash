@@ -1,21 +1,17 @@
 import PropTypes from 'prop-types';
+import { Icon } from './Icon';
+import { Text } from './Text';
 
 export const Button = ({
-  icon, label, backgroundColor, hoverColor, textColor
+  icon = null, label, classes
 }) => (
-  <button className={`
-    ${backgroundColor} hover:${hoverColor}
-    px-4 py-3 rounded-lg
-  `}>
-    {icon}
-    <span className={`${textColor}`}>{label}</span>
+  <button className={classes.join(' ')}>
+    <Icon icon={icon} />
+    <Text content={label} />
   </button>
 );
 
 Button.propTypes = {
   icon: PropTypes.node,
   label: PropTypes.string.isRequired,
-  backgroundColor: PropTypes.string,
-  hoverColor: PropTypes.string,
-  textColor: PropTypes.string,
 };
