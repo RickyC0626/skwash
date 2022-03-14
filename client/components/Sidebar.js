@@ -1,43 +1,93 @@
-import { HomeIcon, ClockIcon } from '@heroicons/react/outline';
+import { HomeIcon, ClockIcon, MenuIcon } from '@heroicons/react/outline';
 
 export const Sidebar = () => (
-  <aside className="
-    top-0 left-0 h-screen w-64 m-0 py-4 px-3
-    bg-gray-50 border-r-2 border-gray-200
-  ">
-    <ul className="space-y-2">
-      <li>
-        <SidebarButton icon={<HomeIcon />} text="Home" active />
-      </li>
-      <li>
-        <SidebarButton icon={<ClockIcon />} text="Recent" />
-      </li>
-    </ul>
+  <aside className='sidebar'>
+    <SidebarSection>
+      <SidebarButtonList>
+        <SidebarButtonListItem>
+          <SidebarButton active>
+            <HomeIcon className='sidebar-button-icon' />
+            <SidebarButtonText>Home</SidebarButtonText>
+          </SidebarButton>
+        </SidebarButtonListItem>
+        <SidebarButtonListItem>
+          <SidebarButton>
+            <MenuIcon className='sidebar-button-icon' />
+            <SidebarButtonText>My tasks</SidebarButtonText>
+          </SidebarButton>
+        </SidebarButtonListItem>
+        <SidebarButtonListItem>
+          <SidebarButton>
+            <ClockIcon className='sidebar-button-icon' />
+            <SidebarButtonText>Recent</SidebarButtonText>
+          </SidebarButton>
+        </SidebarButtonListItem>
+      </SidebarButtonList>
+    </SidebarSection>
+    <SidebarSection>
+      <SidebarSectionHeading>Teams</SidebarSectionHeading>
+      <SidebarButtonList>
+        <SidebarButtonListItem>
+          <SidebarButton>
+            <DotIcon fillColor='fill-indigo-500' />
+            <SidebarButtonText>Engineering</SidebarButtonText>
+          </SidebarButton>
+        </SidebarButtonListItem>
+        <SidebarButtonListItem>
+          <SidebarButton>
+            <DotIcon fillColor='fill-emerald-500' />
+            <SidebarButtonText>Human Resources</SidebarButtonText>
+          </SidebarButton>
+        </SidebarButtonListItem>
+        <SidebarButtonListItem>
+          <SidebarButton>
+            <DotIcon fillColor='fill-amber-500' />
+            <SidebarButtonText>Customer Success</SidebarButtonText>
+          </SidebarButton>
+        </SidebarButtonListItem>
+      </SidebarButtonList>
+    </SidebarSection>
   </aside>
 )
 
-const SidebarButton = ({ icon, text = 'New Button', active }) => (
-  <a href="#" className={`
-    flex p-2 rounded-lg items-center
-    text-base font-normal text-gray-900
-    hover:bg-gray-200
-    ${active ? 'bg-gray-200' : ''}
-  `}>
-    <SidebarButtonIcon icon={icon} />
-    <SidebarButtonText text={text} />
+const SidebarButtonList = ({ children }) => (
+  <ul className='sidebar-button-list'>
+    {children}
+  </ul>
+)
+
+const SidebarButtonListItem = ({ children }) => (
+  <li className='sidebar-button-list-item'>
+    {children}
+  </li>
+)
+
+const SidebarButton = ({ children, active }) => (
+  <a href='#' className={`sidebar-button ${active ? 'active' : ''}`}>
+    {children}
   </a>
 )
 
-const SidebarButtonIcon = ({ icon }) => (
-  <svg className="
-    text-gray-500 w-6 h-6
-  ">
-    {icon}
-  </svg>
+const SidebarButtonText = ({ children }) => (
+  <span className='sidebar-button-text'>
+    {children}
+  </span>
 )
 
-const SidebarButtonText = ({ text }) => (
-  <span className="ml-3">
-    {text}
+const SidebarSection = ({ children }) => (
+  <section className='sidebar-section'>
+    {children}
+  </section>
+)
+
+const SidebarSectionHeading = ({ children }) => (
+  <span className='sidebar-section-heading'>
+    {children}
   </span>
+)
+
+const DotIcon = ({ fillColor }) => (
+  <svg viewBox='0 0 100 100' className={`sidebar-button-icon ${fillColor}`}>
+    <circle cx='50' cy='50' r='25' />
+  </svg>
 )

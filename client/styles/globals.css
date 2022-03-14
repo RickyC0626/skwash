@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .sidebar {
+    @apply bg-gray-50 border-r-2 border-gray-200
+    h-screen w-64 px-3 py-4
+  }
+
+  .sidebar-button-list {
+    @apply space-y-2 mb-8
+  }
+
+  .sidebar-button-list-item {
+
+  }
+
+  .sidebar-button {
+    @apply flex p-2 rounded-lg items-center
+    text-base font-normal text-gray-900
+    hover:bg-gray-200
+  }
+
+  .sidebar-button.active {
+    @apply bg-gray-200
+  }
+
+  .sidebar-button-icon {
+    @apply text-gray-500 w-6 h-6 mr-3
+  }
+
+  .sidebar-button-text {
+  }
+
+  .sidebar-section {
+    @apply space-y-1
+  }
+
+  .sidebar-section-heading {
+    @apply uppercase text-gray-500 font-bold px-2
+  }
+}
