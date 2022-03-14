@@ -4,16 +4,27 @@ export const Sidebar = () => (
   <aside className='sidebar'>
     <SidebarButtonList>
       <SidebarButtonListItem>
-        <SidebarButton icon={<HomeIcon />} label='Home' active />
+        <SidebarButton active>
+          <HomeIcon className='sidebar-button-icon' />
+          <SidebarButtonText>Home</SidebarButtonText>
+        </SidebarButton>
       </SidebarButtonListItem>
       <SidebarButtonListItem>
-        <SidebarButton icon={<MenuIcon />} label='My tasks' />
+        <SidebarButton>
+          <MenuIcon className='sidebar-button-icon' />
+          <SidebarButtonText>My tasks</SidebarButtonText>
+        </SidebarButton>
       </SidebarButtonListItem>
       <SidebarButtonListItem>
-        <SidebarButton icon={<ClockIcon />} label='Recent' />
+        <SidebarButton>
+          <ClockIcon className='sidebar-button-icon' />
+          <SidebarButtonText>Recent</SidebarButtonText>
+        </SidebarButton>
       </SidebarButtonListItem>
       <SidebarButtonListItem>
-        <SidebarButton />
+        <SidebarButton>
+          <SidebarButtonText>No Icon</SidebarButtonText>
+        </SidebarButton>
       </SidebarButtonListItem>
     </SidebarButtonList>
   </aside>
@@ -26,26 +37,19 @@ const SidebarButtonList = ({ children }) => (
 )
 
 const SidebarButtonListItem = ({ children }) => (
-  <li>
+  <li className='sidebar-button-list-item'>
     {children}
   </li>
 )
 
-const SidebarButton = ({ icon = null, label = 'New Button', active }) => (
+const SidebarButton = ({ children, active }) => (
   <a href='#' className={`sidebar-button ${active ? 'active' : ''}`}>
-      {icon ? <SidebarButtonIcon icon={icon} /> : null}
-      <SidebarButtonText text={label} />
+    {children}
   </a>
 )
 
-const SidebarButtonIcon = ({ icon }) => (
-  <svg className='sidebar-button-icon'>
-    {icon}
-  </svg>
-)
-
-const SidebarButtonText = ({ text }) => (
+const SidebarButtonText = ({ children }) => (
   <span className='sidebar-button-text'>
-    {text}
+    {children}
   </span>
 )
