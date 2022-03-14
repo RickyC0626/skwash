@@ -2,24 +2,39 @@ import { HomeIcon, ClockIcon, MenuIcon } from '@heroicons/react/outline';
 
 export const Sidebar = () => (
   <aside className='sidebar'>
-    <ul className='sidebar-button-list'>
-      <li>
-        <SidebarButton icon={<HomeIcon />} text='Home' active />
-      </li>
-      <li>
-        <SidebarButton icon={<MenuIcon />} text='My tasks' />
-      </li>
-      <li>
-        <SidebarButton icon={<ClockIcon />} text='Recent' />
-      </li>
-    </ul>
+    <SidebarButtonList>
+      <SidebarButtonListItem>
+        <SidebarButton icon={<HomeIcon />} label='Home' active />
+      </SidebarButtonListItem>
+      <SidebarButtonListItem>
+        <SidebarButton icon={<MenuIcon />} label='My tasks' />
+      </SidebarButtonListItem>
+      <SidebarButtonListItem>
+        <SidebarButton icon={<ClockIcon />} label='Recent' />
+      </SidebarButtonListItem>
+      <SidebarButtonListItem>
+        <SidebarButton />
+      </SidebarButtonListItem>
+    </SidebarButtonList>
   </aside>
 )
 
-const SidebarButton = ({ icon, text = 'New Button', active }) => (
+const SidebarButtonList = ({ children }) => (
+  <ul className='sidebar-button-list'>
+    {children}
+  </ul>
+)
+
+const SidebarButtonListItem = ({ children }) => (
+  <li>
+    {children}
+  </li>
+)
+
+const SidebarButton = ({ icon = null, label = 'New Button', active }) => (
   <a href='#' className={`sidebar-button ${active ? 'active' : ''}`}>
-      <SidebarButtonIcon icon={icon} />
-      <SidebarButtonText text={text} />
+      {icon ? <SidebarButtonIcon icon={icon} /> : null}
+      <SidebarButtonText text={label} />
   </a>
 )
 

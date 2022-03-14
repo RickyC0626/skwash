@@ -23,10 +23,9 @@
   }
 
   .sidebar-button-icon {
-    @apply text-gray-500 w-6 h-6
+    @apply text-gray-500 w-6 h-6 mr-3
   }
 
   .sidebar-button-text {
-    @apply ml-3
   }
 }
