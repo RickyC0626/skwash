@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
+    "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "^1.0.6",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -17,10 +21,21 @@
     "styled-normalize": "^8.0.7"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
     "autoprefixer": "^10.4.2",
+    "babel-loader": "^8.2.3",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
     "postcss": "^8.4.8",
+    "storybook": "^6.4.19",
     "tailwindcss": "^3.0.23"
   }
 }
