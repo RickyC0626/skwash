@@ -2,31 +2,28 @@ import { HomeIcon, ClockIcon, MenuIcon } from '@heroicons/react/outline';
 
 export const Sidebar = () => (
   <aside className='sidebar'>
-    <SidebarButtonList>
-      <SidebarButtonListItem>
-        <SidebarButton active>
-          <HomeIcon className='sidebar-button-icon' />
-          <SidebarButtonText>Home</SidebarButtonText>
-        </SidebarButton>
-      </SidebarButtonListItem>
-      <SidebarButtonListItem>
-        <SidebarButton>
-          <MenuIcon className='sidebar-button-icon' />
-          <SidebarButtonText>My tasks</SidebarButtonText>
-        </SidebarButton>
-      </SidebarButtonListItem>
-      <SidebarButtonListItem>
-        <SidebarButton>
-          <ClockIcon className='sidebar-button-icon' />
-          <SidebarButtonText>Recent</SidebarButtonText>
-        </SidebarButton>
-      </SidebarButtonListItem>
-      <SidebarButtonListItem>
-        <SidebarButton>
-          <SidebarButtonText>No Icon</SidebarButtonText>
-        </SidebarButton>
-      </SidebarButtonListItem>
-    </SidebarButtonList>
+    <SidebarSection>
+      <SidebarButtonList>
+        <SidebarButtonListItem>
+          <SidebarButton active>
+            <HomeIcon className='sidebar-button-icon' />
+            <SidebarButtonText>Home</SidebarButtonText>
+          </SidebarButton>
+        </SidebarButtonListItem>
+        <SidebarButtonListItem>
+          <SidebarButton>
+            <MenuIcon className='sidebar-button-icon' />
+            <SidebarButtonText>My tasks</SidebarButtonText>
+          </SidebarButton>
+        </SidebarButtonListItem>
+        <SidebarButtonListItem>
+          <SidebarButton>
+            <ClockIcon className='sidebar-button-icon' />
+            <SidebarButtonText>Recent</SidebarButtonText>
+          </SidebarButton>
+        </SidebarButtonListItem>
+      </SidebarButtonList>
+    </SidebarSection>
     <SidebarSection>
       <SidebarSectionHeading>Teams</SidebarSectionHeading>
       <SidebarButtonList>
