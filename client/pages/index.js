@@ -1,3 +1,4 @@
+import { HeaderNav } from '../components/HeaderNav';
 import { Sidebar } from '../components/Sidebar';
 
 export default function Home() {
@@ -6,11 +7,7 @@ export default function Home() {
       <div className="flex">
         <Sidebar />
         <div className="grow">
-          <header className="py-4 px-6">
-            <span className="text-xl">
-              Home
-            </span>
-          </header>
+          <HeaderNav />
           <hr/>
           <div className="py-4 px-6">
             <span className="text-xl">

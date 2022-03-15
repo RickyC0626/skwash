@@ -40,4 +40,12 @@
   .sidebar-section-heading {
     @apply uppercase text-gray-500 font-bold px-2
   }
+
+  .header-nav {
+    @apply py-4 px-6
+  }
+
+  .header-nav-title {
+    @apply text-xl
+  }
 }
