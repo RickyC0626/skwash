@@ -1,4 +1,6 @@
 import { HeaderNav } from '../components/HeaderNav';
+import { PinnedProjects } from '../components/PinnedProjects';
+import { Projects } from '../components/Projects';
 import { Sidebar } from '../components/Sidebar';
 
 export default function Home() {
@@ -9,16 +11,9 @@ export default function Home() {
         <div className="grow">
           <HeaderNav />
           <hr/>
-          <div className="py-4 px-6">
-            <span className="text-xl">
-              Pinned Projects
-            </span>
-          </div>
-          <hr/>
-          <main className="py-4 px-6">
-            <span className="text-xl">
-              Projects
-            </span>
+          <main>
+            <PinnedProjects />
+            <Projects />
           </main>
         </div>
       </div>

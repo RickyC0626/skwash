@@ -48,4 +48,13 @@
   .header-nav-title {
     @apply text-xl
   }
+
+  .project-table-head {
+    @apply bg-gray-100 border-y-2
+  }
+
+  .project-table-heading {
+    @apply uppercase text-gray-500 font-bold text-sm text-left
+    py-3 px-6
+  }
 }
