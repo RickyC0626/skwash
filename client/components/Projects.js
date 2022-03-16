@@ -1,3 +1,5 @@
+import { DotIcon } from './DotIcon';
+
 export const Projects = () => (
   <table className='table-auto min-w-full'>
     <thead className='project-table-head'>
@@ -13,9 +15,7 @@ export const Projects = () => (
     <tbody>
       <tr className='border-b'>
         <td className='py-4 px-6 whitespace-nowrap flex gap-2'>
-          <svg viewBox='0 0 100 100' className='w-6 h-auto fill-pink-500'>
-            <circle cx='50%' cy='50%' r='25' />
-          </svg>
+          <DotIcon className='fill-pink-500' />
           <div>
             <span className='font-semibold'>GraphQL API</span>{' '}
             <span className='text-gray-500'>in Engineering</span>

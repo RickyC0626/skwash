@@ -17,7 +17,7 @@
   }
 
   .sidebar-button {
-    @apply flex p-2 rounded-lg items-center
+    @apply flex p-2 gap-3 rounded-lg items-center
     text-base font-normal text-gray-900
     hover:bg-gray-200
   }
@@ -27,7 +27,7 @@
   }
 
   .sidebar-button-icon {
-    @apply text-gray-500 w-6 h-6 mr-3
+    @apply text-gray-500 w-6 h-6
   }
 
   .sidebar-button-text {
