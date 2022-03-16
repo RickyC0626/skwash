@@ -1,5 +1,7 @@
 import { HomeIcon, ClockIcon, MenuIcon } from '@heroicons/react/outline';
 
+import { DotIcon } from './DotIcon';
+
 export const Sidebar = () => (
   <aside className='sidebar'>
     <SidebarSection>
@@ -29,19 +31,19 @@ export const Sidebar = () => (
       <SidebarButtonList>
         <SidebarButtonListItem>
           <SidebarButton>
-            <DotIcon fillColor='fill-indigo-500' />
+            <DotIcon className='fill-indigo-500' />
             <SidebarButtonText>Engineering</SidebarButtonText>
           </SidebarButton>
         </SidebarButtonListItem>
         <SidebarButtonListItem>
           <SidebarButton>
-            <DotIcon fillColor='fill-emerald-500' />
+            <DotIcon className='fill-emerald-500' />
             <SidebarButtonText>Human Resources</SidebarButtonText>
           </SidebarButton>
         </SidebarButtonListItem>
         <SidebarButtonListItem>
           <SidebarButton>
-            <DotIcon fillColor='fill-amber-500' />
+            <DotIcon className='fill-amber-500' />
             <SidebarButtonText>Customer Success</SidebarButtonText>
           </SidebarButton>
         </SidebarButtonListItem>
@@ -84,10 +86,4 @@ const SidebarSectionHeading = ({ children }) => (
   <span className='sidebar-section-heading'>
     {children}
   </span>
-)
-
-const DotIcon = ({ fillColor }) => (
-  <svg viewBox='0 0 100 100' className={`sidebar-button-icon ${fillColor}`}>
-    <circle cx='50' cy='50' r='25' />
-  </svg>
 )
