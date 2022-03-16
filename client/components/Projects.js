@@ -1,5 +1,5 @@
 export const Projects = () => (
-  <table class='table-auto min-w-full'>
+  <table className='table-auto min-w-full'>
     <thead className='project-table-head'>
       <tr>
         <th scope='col' className='project-table-heading'>Projects</th>
