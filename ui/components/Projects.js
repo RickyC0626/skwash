@@ -60,8 +60,8 @@ export const Projects = () => {
         </tr>
       </thead>
       <tbody>
-        {projectData.map(project => (
-            <tr className='border-b'>
+        {projectData.map((project, idx) => (
+            <tr id={idx} className='border-b'>
               <td className='py-4 px-6 whitespace-nowrap flex gap-2'>
                 <DotIcon className={dotColors[toCamelCase(project.team)]} />
                 <div>
