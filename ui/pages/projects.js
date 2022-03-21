@@ -6,19 +6,12 @@ import { Sidebar } from '../components/Sidebar';
 
 export default function ProjectsPage() {
   return (
-    <>
-      {/* <div className="flex">
-        <Sidebar />
-        <div className="grow">
-          <HeaderNav />
-          <hr/>
-          <main>
-            <PinnedProjects />
-            <Projects />
-          </main>
-        </div>
-      </div> */}
+    <div id='page-wrapper'>
+      <header></header>
+      <hr/>
       <main></main>
-    </>
+      <hr/>
+      <footer></footer>
+    </div>
   )
 }
