@@ -1,22 +1,15 @@
-import { HeaderNav } from '../components/HeaderNav';
-import { PinnedProjects } from '../components/PinnedProjects';
-import { Projects } from '../components/Projects';
-import { Sidebar } from '../components/Sidebar';
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <>
-      <div className="flex">
-        <Sidebar />
-        <div className="grow">
-          <HeaderNav />
-          <hr/>
-          <main>
-            <PinnedProjects />
-            <Projects />
-          </main>
-        </div>
-      </div>
+      <ul>
+        <li>
+          <Link href='/projects'>
+            <a>Projects</a>
+          </Link>
+        </li>
+      </ul>
     </>
   )
 }
