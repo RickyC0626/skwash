@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const HeaderNav = () => (
   <header className='header-nav'>
     <HeaderNavTitle>Home</HeaderNavTitle>

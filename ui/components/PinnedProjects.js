@@ -1,3 +1,4 @@
+import React from 'react';
 import { DotsVerticalIcon } from '@heroicons/react/solid'
 
 export const PinnedProjects = () => (

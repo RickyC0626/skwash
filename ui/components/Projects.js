@@ -1,3 +1,4 @@
+import React from 'react';
 import { DotIcon } from './DotIcon';
 
 const projectData = [
@@ -61,7 +62,7 @@ export const Projects = () => {
       </thead>
       <tbody>
         {projectData.map((project, idx) => (
-            <tr id={idx} className='border-b'>
+            <tr key={idx} className='border-b'>
               <td className='py-4 px-6 whitespace-nowrap flex gap-2'>
                 <DotIcon className={dotColors[toCamelCase(project.team)]} />
                 <div>
