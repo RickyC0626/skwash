@@ -1,26 +1,27 @@
+import styles from './Sidebar.module.css';
 import { HomeIcon, ClockIcon, MenuIcon } from '@heroicons/react/outline';
 
-import { DotIcon } from './DotIcon';
+import { DotIcon } from '../DotIcon';
 
 export const Sidebar = () => (
-  <aside className='sidebar'>
+  <aside className={styles.sidebar}>
     <SidebarSection>
       <SidebarButtonList>
         <SidebarButtonListItem>
           <SidebarButton active>
-            <HomeIcon className='sidebar-button-icon' />
+            <HomeIcon className={styles.sidebarButtonIcon} />
             <SidebarButtonText>Home</SidebarButtonText>
           </SidebarButton>
         </SidebarButtonListItem>
         <SidebarButtonListItem>
           <SidebarButton>
-            <MenuIcon className='sidebar-button-icon' />
+            <MenuIcon className={styles.sidebarButtonIcon} />
             <SidebarButtonText>My tasks</SidebarButtonText>
           </SidebarButton>
         </SidebarButtonListItem>
         <SidebarButtonListItem>
           <SidebarButton>
-            <ClockIcon className='sidebar-button-icon' />
+            <ClockIcon className={styles.sidebarButtonIcon} />
             <SidebarButtonText>Recent</SidebarButtonText>
           </SidebarButton>
         </SidebarButtonListItem>
@@ -53,37 +54,37 @@ export const Sidebar = () => (
 )
 
 const SidebarButtonList = ({ children }) => (
-  <ul className='sidebar-button-list'>
+  <ul className={styles.sidebarButtonList}>
     {children}
   </ul>
 )
 
 const SidebarButtonListItem = ({ children }) => (
-  <li className='sidebar-button-list-item'>
+  <li className={styles.sidebarButtonListItem}>
     {children}
   </li>
 )
 
 const SidebarButton = ({ children, active }) => (
-  <a href='#' className={`sidebar-button ${active ? 'active' : ''}`}>
+  <a href='#' className={`${styles.sidebarButton} ${active ? 'active' : ''}`}>
     {children}
   </a>
 )
 
 const SidebarButtonText = ({ children }) => (
-  <span className='sidebar-button-text'>
+  <span className={styles.sidebarButtonText}>
     {children}
   </span>
 )
 
 const SidebarSection = ({ children }) => (
-  <section className='sidebar-section'>
+  <section className={styles.sidebarSection}>
     {children}
   </section>
 )
 
 const SidebarSectionHeading = ({ children }) => (
-  <span className='sidebar-section-heading'>
+  <span className={styles.sidebarSectionHeading}>
     {children}
   </span>
 )

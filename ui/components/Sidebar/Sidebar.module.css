@@ -1,0 +1,30 @@
+.sidebar {
+  @apply bg-gray-50 border-r-2 border-gray-200
+  h-screen w-64 px-3 py-4
+}
+
+.sidebarButtonList {
+  @apply space-y-2 mb-8
+}
+
+.sidebarButton {
+  @apply flex p-2 gap-3 rounded-lg items-center
+  text-base font-normal text-gray-900
+  hover:bg-gray-200
+}
+
+.sidebarButton.active {
+  @apply bg-gray-200
+}
+
+.sidebarButtonIcon {
+  @apply text-gray-500 w-6 h-6
+}
+
+.sidebarSection {
+  @apply space-y-1
+}
+
+.sidebarSectionHeading {
+  @apply uppercase text-gray-500 font-bold px-2
+}
