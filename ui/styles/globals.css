@@ -26,7 +26,17 @@
   }
 }
 
+@screen 2xl {
+  #page-content {
+    @apply max-w-screen-2xl
+  }
+}
+
 @layer components {
+  #page-wrapper {
+    @apply flex
+  }
+
   #page-content {
     @apply mx-auto
   }

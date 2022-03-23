@@ -56,5 +56,14 @@ describe('<ProjectsPage />', () => {
         });
       });
     });
+
+    it('children should be in proper order', () => {
+      const wrapper = render(<ProjectsPage />);
+      const ordering = ['aside', 'div'];
+
+      wrapper.children().each((idx, node) => {
+        expect(node.name).toEqual(ordering[idx]);
+      });
+    });
   });
 });
