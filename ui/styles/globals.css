@@ -2,7 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@screen sm {
+  #page-content {
+    @apply max-w-screen-sm
+  }
+}
+
+@screen md {
+  #page-content {
+    @apply max-w-screen-md
+  }
+}
+
+@screen lg {
+  #page-content {
+    @apply max-w-screen-lg
+  }
+}
+
+@screen xl {
+  #page-content {
+    @apply max-w-screen-xl
+  }
+}
+
 @layer components {
+  #page-content {
+    @apply mx-auto
+  }
+
   .sidebar {
     @apply bg-gray-50 border-r-2 border-gray-200
     h-screen w-64 px-3 py-4

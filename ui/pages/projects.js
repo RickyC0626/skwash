@@ -6,14 +6,16 @@ import { Projects } from '../components/Projects';
 export default function ProjectsPage() {
   return (
     <div id='page-wrapper'>
-      <HeaderNav />
-      <hr/>
-      <main>
-        <PinnedProjects/>
-        <Projects />
-      </main>
-      <hr/>
-      <footer></footer>
+      <div id='page-content'>
+        <HeaderNav />
+        <hr/>
+        <main>
+          <PinnedProjects/>
+          <Projects />
+        </main>
+        <hr/>
+        <footer></footer>
+      </div>
     </div>
   )
 }
