@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './Sidebar.module.css';
 import { HomeIcon, ClockIcon, MenuIcon } from '@heroicons/react/outline';
 
@@ -5,86 +6,90 @@ import { DotIcon } from '../DotIcon';
 
 export const Sidebar = () => (
   <aside className={styles.sidebar}>
-    <SidebarSection>
-      <SidebarButtonList>
-        <SidebarButtonListItem>
-          <SidebarButton active>
-            <HomeIcon className={styles.sidebarButtonIcon} />
-            <SidebarButtonText>Home</SidebarButtonText>
-          </SidebarButton>
-        </SidebarButtonListItem>
-        <SidebarButtonListItem>
-          <SidebarButton>
-            <MenuIcon className={styles.sidebarButtonIcon} />
-            <SidebarButtonText>My tasks</SidebarButtonText>
-          </SidebarButton>
-        </SidebarButtonListItem>
-        <SidebarButtonListItem>
-          <SidebarButton>
-            <ClockIcon className={styles.sidebarButtonIcon} />
-            <SidebarButtonText>Recent</SidebarButtonText>
-          </SidebarButton>
-        </SidebarButtonListItem>
-      </SidebarButtonList>
-    </SidebarSection>
-    <SidebarSection>
-      <SidebarSectionHeading>Teams</SidebarSectionHeading>
-      <SidebarButtonList>
-        <SidebarButtonListItem>
-          <SidebarButton>
+    <SbSection>
+      <SbList>
+        <SbListItem>
+          <SbLink href='#'>
+            <SbLinkIcon Icon={HomeIcon} />
+            <SbLinkText>Home</SbLinkText>
+          </SbLink>
+        </SbListItem>
+        <SbListItem>
+          <SbLink href='#'>
+            <SbLinkIcon Icon={MenuIcon} />
+            <SbLinkText>Menu</SbLinkText>
+          </SbLink>
+        </SbListItem>
+        <SbListItem>
+          <SbLink href='#'>
+            <SbLinkIcon Icon={ClockIcon} />
+            <SbLinkText>Recent</SbLinkText>
+          </SbLink>
+        </SbListItem>
+      </SbList>
+    </SbSection>
+    <SbSection>
+      <SbSectionHeading>Teams</SbSectionHeading>
+      <SbList>
+        <SbListItem>
+          <SbLink href='#'>
             <DotIcon className='fill-indigo-500' />
-            <SidebarButtonText>Engineering</SidebarButtonText>
-          </SidebarButton>
-        </SidebarButtonListItem>
-        <SidebarButtonListItem>
-          <SidebarButton>
+            <SbLinkText>Engineering</SbLinkText>
+          </SbLink>
+        </SbListItem>
+        <SbListItem>
+          <SbLink href='#'>
             <DotIcon className='fill-emerald-500' />
-            <SidebarButtonText>Human Resources</SidebarButtonText>
-          </SidebarButton>
-        </SidebarButtonListItem>
-        <SidebarButtonListItem>
-          <SidebarButton>
+            <SbLinkText>Human Resources</SbLinkText>
+          </SbLink>
+        </SbListItem>
+        <SbListItem>
+          <SbLink href='#'>
             <DotIcon className='fill-amber-500' />
-            <SidebarButtonText>Customer Success</SidebarButtonText>
-          </SidebarButton>
-        </SidebarButtonListItem>
-      </SidebarButtonList>
-    </SidebarSection>
+            <SbLinkText>Customer Success</SbLinkText>
+          </SbLink>
+        </SbListItem>
+      </SbList>
+    </SbSection>
   </aside>
 )
 
-const SidebarButtonList = ({ children }) => (
-  <ul className={styles.sidebarButtonList}>
-    {children}
-  </ul>
-)
-
-const SidebarButtonListItem = ({ children }) => (
-  <li className={styles.sidebarButtonListItem}>
-    {children}
-  </li>
-)
-
-const SidebarButton = ({ children, active }) => (
-  <a href='#' className={`${styles.sidebarButton} ${active ? 'active' : ''}`}>
-    {children}
-  </a>
-)
-
-const SidebarButtonText = ({ children }) => (
-  <span className={styles.sidebarButtonText}>
-    {children}
-  </span>
-)
-
-const SidebarSection = ({ children }) => (
-  <section className={styles.sidebarSection}>
+const SbSection = ({ children }) => (
+  <section className={styles['sidebar-section']}>
     {children}
   </section>
-)
+);
 
-const SidebarSectionHeading = ({ children }) => (
-  <span className={styles.sidebarSectionHeading}>
+const SbSectionHeading = ({ children }) => (
+  <span className={styles['sidebar-section-heading']}>
     {children}
   </span>
-)
+);
+
+const SbList = ({ children }) => (
+  <ul className={styles['sidebar-list']}>
+    {children}
+  </ul>
+);
+
+const SbListItem = ({ children }) => (
+  <li className={styles['sidebar-list-item']}>
+    {children}
+  </li>
+);
+
+const SbLink = ({ children, href }) => (
+  <a href={href} className={styles['sidebar-link']}>
+    {children}
+  </a>
+);
+
+const SbLinkIcon = ({ Icon }) => (
+  <Icon className={styles['sidebar-link-icon']} />
+);
+
+const SbLinkText = ({ children }) => (
+  <span className={styles['sidebar-link-text']}>
+    {children}
+  </span>
+);

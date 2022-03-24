@@ -3,28 +3,28 @@
   h-screen w-64 px-3 py-4
 }
 
-.sidebarButtonList {
+.sidebar-list {
   @apply space-y-2 mb-8
 }
 
-.sidebarButton {
+.sidebar-link {
   @apply flex p-2 gap-3 rounded-lg items-center
   text-base font-normal text-gray-900
   hover:bg-gray-200
 }
 
-.sidebarButton.active {
+.sidebar-link.active {
   @apply bg-gray-200
 }
 
-.sidebarButtonIcon {
+.sidebar-link-icon {
   @apply text-gray-500 w-6 h-6
 }
 
-.sidebarSection {
+.sidebar-section {
   @apply space-y-1
 }
 
-.sidebarSectionHeading {
+.sidebar-section-heading {
   @apply uppercase text-gray-500 font-bold px-2
 }
