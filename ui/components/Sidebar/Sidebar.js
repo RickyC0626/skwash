@@ -1,28 +1,36 @@
 import React from 'react';
 import styles from './Sidebar.module.css';
-import { HomeIcon, ClockIcon, MenuIcon } from '@heroicons/react/outline';
+import { HomeIcon, ClockIcon, MenuIcon, MenuAlt2Icon } from '@heroicons/react/outline';
 
 import { DotIcon } from '../DotIcon';
 
 export const Sidebar = () => (
   <aside className={styles.sidebar}>
     <SbSection>
+      <div className='flex'>
+        <span className='p-2 grow'>LOGO</span>
+        <SbMenuButton>
+          <SbIcon Icon={MenuAlt2Icon} />
+        </SbMenuButton>
+      </div>
+    </SbSection>
+    <SbSection>
       <SbList>
         <SbListItem>
           <SbLink href='#'>
-            <SbLinkIcon Icon={HomeIcon} />
+            <SbIcon Icon={HomeIcon} />
             <SbLinkText>Home</SbLinkText>
           </SbLink>
         </SbListItem>
         <SbListItem>
           <SbLink href='#'>
-            <SbLinkIcon Icon={MenuIcon} />
+            <SbIcon Icon={MenuIcon} />
             <SbLinkText>Menu</SbLinkText>
           </SbLink>
         </SbListItem>
         <SbListItem>
           <SbLink href='#'>
-            <SbLinkIcon Icon={ClockIcon} />
+            <SbIcon Icon={ClockIcon} />
             <SbLinkText>Recent</SbLinkText>
           </SbLink>
         </SbListItem>
@@ -54,6 +62,12 @@ export const Sidebar = () => (
   </aside>
 )
 
+const SbMenuButton = ({ children }) => (
+  <button className={styles['sidebar-menu-button']}>
+    {children}
+  </button>
+);
+
 const SbSection = ({ children }) => (
   <section className={styles['sidebar-section']}>
     {children}
@@ -84,8 +98,8 @@ const SbLink = ({ children, href }) => (
   </a>
 );
 
-const SbLinkIcon = ({ Icon }) => (
-  <Icon className={styles['sidebar-link-icon']} />
+const SbIcon = ({ Icon }) => (
+  <Icon className={styles['sidebar-icon']} />
 );
 
 const SbLinkText = ({ children }) => (
