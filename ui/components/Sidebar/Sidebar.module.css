@@ -1,6 +1,24 @@
 .sidebar {
   @apply bg-gray-50 border-r-2 border-gray-200
-  h-screen w-64 px-3 py-4
+  h-screen px-3 py-4 overflow-x-hidden overflow-y-auto
+  transition-all ease-in-out duration-300 w-64
+}
+
+.sidebar.open {
+  @apply w-64
+}
+
+.sidebar.closed {
+  @apply w-16
+}
+
+.sidebar-logo {
+  @apply p-2 grow
+  transition-all ease-in-out duration-300
+}
+
+.sidebar-logo.closed {
+  @apply hidden grow-0
 }
 
 .sidebar-menu-button {
